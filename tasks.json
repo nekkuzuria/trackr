@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "description": "Build a Rust project",
+    "status": "in-progress"
+  },
+  {
+    "id": 3,
+    "description": "Deploy to production ASAP",
+    "status": "todo"
+  },
+  {
+    "id": 4,
+    "description": "Learn Rust",
+    "status": "in-progress"
+  }
+]

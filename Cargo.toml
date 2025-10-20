@@ -1,0 +1,14 @@
+[package]
+name = "trackr"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "trackr"
+path = "src/lib.rs"
+
+[[bin]]
+name = "trackr"
+path = "src/main.rs"
+
+[dependencies]
