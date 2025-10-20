@@ -4,6 +4,8 @@
 
 a cute, fun, and actually useful CLI task tracker built with Rust 🦀
 
+**📌 Built for:** [roadmap.sh Task Tracker Challenge](https://roadmap.sh/projects/task-tracker)
+
 ```
            /\_/\  
           ( o.o ) 
