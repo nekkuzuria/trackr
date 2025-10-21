@@ -1,6 +1,7 @@
 mod task;
 mod storage;
 mod commands;
+mod quotes;
 
 use std::env;
 use storage::Storage;

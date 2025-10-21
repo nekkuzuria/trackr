@@ -1,5 +1,6 @@
 use crate::storage::Storage;
 use crate::task::{Task, TaskStatus};
+use crate::quotes::Quotes;
 
 pub struct Commands {
     storage: Storage,
@@ -125,7 +126,8 @@ impl Commands {
             return;
         }
 
-        println!("\n\x1b[96m🐾 Listing your vibes (tasks)...\x1b[0m\n");
+        println!("\n\x1b[95m{}\x1b[0m\n", Quotes::get_random());
+        println!("\x1b[96m🐾 Listing your vibes (tasks)...\x1b[0m\n");
         println!("\x1b[90m{:<6} {:<15} {}\x1b[0m", "ID", "STATUS", "DESCRIPTION");
         println!("\x1b[90m{}\x1b[0m", "─".repeat(60));
 

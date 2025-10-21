@@ -12,3 +12,4 @@ name = "trackr"
 path = "src/main.rs"
 
 [dependencies]
+rand = "0.8"
