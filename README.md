@@ -24,7 +24,6 @@ a cute, fun, and actually useful CLI task tracker built with Rust 🦀
 - 🎨 **colorful vibes** - pink, purple, cyan aesthetics
 - 🚀 **zero dependencies** - pure Rust stdlib only
 - 📝 **simple JSON storage** - human-readable data
-- 💯 **gen z energy** - messages that actually slap
 
 ## 🚀 installation
 
@@ -69,9 +68,9 @@ trackr update 1 "actually finish that assignment fr fr"
 
 ### mark task status
 ```bash
-trackr mark 1 in-progress  # you're working on it!
-trackr mark 1 done         # yassss finished!
-trackr mark 1 todo         # back to the grind
+trackr mark 1 in-progress  
+trackr mark 1 done        
+trackr mark 1 todo        
 # ⚡ Task marked as in-progress! Keep going!
 ```
 
@@ -89,13 +88,21 @@ trackr delete 2
 | `in-progress` | ⚡ | working on it rn |
 | `done` | ✨ | completed, period |
 
+## 🎭 messages you'll see
+
+- `😸 Task added successfully, slay!`
+- `✨ Task updated, you're killing it!`
+- `🗑️  Task deleted! Bye bye task #X`
+- `😿 Task not found, meow again!`
+- `🐾 Listing your vibes (tasks)...`
+- `⚡ Task marked as in-progress! Keep going!`
+
 ## 💾 where's my data?
 
 all your tasks are saved in `tasks.json` in the same directory where you run trackr. it's just JSON, so you can edit it manually if you want (but why would you when trackr is this cute?)
 
-## 🧪 testing
 
-we've got **83 comprehensive tests** with **74.87% code coverage**! 
+## 🧪 testing
 
 ```bash
 # run all tests
@@ -104,14 +111,6 @@ cargo test
 # run with coverage (requires cargo-tarpaulin)
 cargo tarpaulin --out Stdout
 ```
-
-### test files:
-- ✅ `tests/task_tests.rs` - 14 tests
-- ✅ `tests/storage_tests.rs` - 12 tests  
-- ✅ `tests/storage_edge_cases_tests.rs` - 13 tests
-- ✅ `tests/storage_comprehensive_tests.rs` - 12 tests
-- ✅ `tests/commands_tests.rs` - 20 tests
-- ✅ `tests/commands_edge_cases_tests.rs` - 12 tests
 
 ## 🏗️ architecture
 
@@ -123,24 +122,9 @@ trackr/
 │   ├── task.rs       → Task struct & status logic (100% coverage!)
 │   ├── storage.rs    → JSON read/write with pure stdlib
 │   └── commands.rs   → all command implementations
-├── tests/            → 83 integration tests
+├── tests/            → integration tests
 └── Cargo.toml        → no external dependencies!
 ```
-
-**clean architecture vibes:**
-- 🎯 separation of concerns
-- ✨ zero external dependencies
-- 🧪 comprehensive test coverage
-- 🚀 production-ready code
-
-## 🎭 messages you'll see
-
-- `😸 Task added successfully, slay!`
-- `✨ Task updated, you're killing it!`
-- `🗑️  Task deleted! Bye bye task #X`
-- `😿 Task not found, meow again!`
-- `🐾 Listing your vibes (tasks)...`
-- `⚡ Task marked as in-progress! Keep going!`
 
 ## 🤝 contributing
 
