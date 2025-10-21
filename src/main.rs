@@ -37,6 +37,8 @@ fn print_help() {
     println!("    Mark task status (todo, in-progress, done)\n");
     println!("\x1b[93m  trackr list [status]\x1b[0m");
     println!("    List all tasks or filter by status\n");
+    println!("\x1b[93m  trackr reset\x1b[0m");
+    println!("    Clear all tasks\n");
 }
 
 fn main() {
@@ -117,6 +119,9 @@ fn main() {
                 None
             };
             commands.list(filter);
+        }
+        "reset" => {
+            commands.reset();
         }
         "help" | "--help" | "-h" => {
             print_help();

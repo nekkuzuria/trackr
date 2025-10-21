@@ -145,5 +145,16 @@ impl Commands {
 
         println!();
     }
+
+    pub fn reset(&self) {
+        match self.storage.save_tasks(&vec![]) {
+            Ok(_) => {
+                println!("\n\x1b[95m🧹 All tasks cleared! Fresh start, bestie!\x1b[0m\n");
+            }
+            Err(e) => {
+                println!("\n\x1b[91m😿 Failed to reset: {}\x1b[0m\n", e);
+            }
+        }
+    }
 }
 

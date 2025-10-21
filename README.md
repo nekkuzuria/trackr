@@ -22,7 +22,8 @@ a cute, fun, and actually useful CLI task tracker built with Rust 🦀
 - 😸 **cute af** - comes with an adorable ASCII cat
 - ⚡ **super fast** - written in Rust, blazingly fast
 - 🎨 **colorful vibes** - pink, purple, cyan aesthetics
-- 🚀 **zero dependencies** - pure Rust stdlib only
+- 💬 **motivational quotes** - 50 Gen Z slang quotes to keep you going
+- 🚀 **zero dependencies** - pure Rust stdlib only 
 - 📝 **simple JSON storage** - human-readable data
 
 ## 🚀 installation
@@ -50,6 +51,7 @@ trackr add "finish that assignment"
 ### list your tasks
 ```bash
 trackr list
+# 💯 No cap, you're crushing it today!
 # 🐾 Listing your vibes (tasks)...
 ```
 
@@ -80,6 +82,12 @@ trackr delete 2
 # 🗑️  Task deleted! Bye bye task #2
 ```
 
+### reset all tasks
+```bash
+trackr reset
+# 🧹 All tasks cleared! Fresh start, bestie!
+```
+
 ## 🎨 task statuses
 
 | status | emoji | meaning |
@@ -93,9 +101,11 @@ trackr delete 2
 - `😸 Task added successfully, slay!`
 - `✨ Task updated, you're killing it!`
 - `🗑️  Task deleted! Bye bye task #X`
+- `🧹 All tasks cleared! Fresh start, bestie!`
 - `😿 Task not found, meow again!`
 - `🐾 Listing your vibes (tasks)...`
 - `⚡ Task marked as in-progress! Keep going!`
+- `💯 No cap, you're crushing it today!` (random motivational quote on list)
 
 ## 💾 where's my data?
 
@@ -119,11 +129,12 @@ trackr/
 ├── src/
 │   ├── main.rs       → entry point, CLI parsing, cute cat banner
 │   ├── lib.rs        → library exports
-│   ├── task.rs       → Task struct & status logic (100% coverage!)
+│   ├── task.rs       → Task struct & status logic
 │   ├── storage.rs    → JSON read/write with pure stdlib
-│   └── commands.rs   → all command implementations
+│   ├── commands.rs   → all command implementations
+│   └── quotes.rs     → 50 motivational Gen Z quotes
 ├── tests/            → integration tests
-└── Cargo.toml        → no external dependencies!
+└── Cargo.toml        → minimal dependencies (rand only)
 ```
 
 ## 🤝 contributing
