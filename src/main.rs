@@ -51,7 +51,9 @@ fn main() {
         return;
     }
 
-    let storage = Storage::new("tasks.json");
+    let home_dir = env::var("HOME").unwrap_or_else(|_| ".".to_string());
+    let tasks_path = format!("{}/.trackr_tasks.json", home_dir);
+    let storage = Storage::new(&tasks_path);
     let commands = Commands::new(storage);
 
     let command = &args[1];
